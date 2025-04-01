@@ -16,4 +16,18 @@ public class PersonController : Controller
     {
         return View(_TestDataFactory.TestData);
     }
+
+    public IActionResult Edit(string id)
+    {
+        var person = _TestDataFactory.TestData.FirstOrDefault(x => x.Id == id);
+
+        if (person == null)
+        {
+            return NotFound();
+        }
+        else
+        {
+            return View(person);
+        }
+    }
 }

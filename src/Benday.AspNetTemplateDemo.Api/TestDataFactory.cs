@@ -17,6 +17,8 @@ public class TestDataFactory
             if (_TestData == null)
             {
                 _TestData = GetPersonList(25);
+
+                _TestData = _TestData.OrderBy(x => x.LastName).ThenBy(x => x.FirstName).ToList();
             }
 
             return _TestData;
