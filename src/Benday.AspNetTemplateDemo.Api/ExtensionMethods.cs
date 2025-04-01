@@ -1,17 +1,20 @@
-﻿namespace Benday.AspNetTemplateDemo.Api;
+﻿using System.Security.Cryptography;
+
+namespace Benday.AspNetTemplateDemo.Api;
 
 public static class ExtensionMethods
 {
     public static string GetRandom(this List<string> list)
     {
-        var rnd = new Random();
-        var index = rnd.Next(0, list.Count);
+        var rnd = new RandomNumGen();
+        var index = rnd.GetNumberInRange(0, list.Count);
         return list[index];
     }
 
     public static string GetRandomPossiblyTwoWords(this List<string> list)
     {
-        var rnd = new Random();
+        var rnd = new RandomNumGen();
+        
         var isTwoWords = rnd.Next(0, 2) == 1;
         var index1 = rnd.Next(0, list.Count);
         if (isTwoWords == false)
@@ -30,7 +33,7 @@ public static class ExtensionMethods
 
     public static string GetRandomPossiblyHyphenated(this List<string> list)
     {
-        var rnd = new Random();
+        var rnd = new RandomNumGen();
 
         var isHyphenated = rnd.Next(0, 2) == 1;
 
