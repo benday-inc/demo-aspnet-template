@@ -9,6 +9,21 @@ public class TestDataFactory
         CreateFakePostalCodes(200);
     }
 
+    private List<Person>? _TestData;
+    public List<Person> TestData
+    {
+        get
+        {
+            if (_TestData == null)
+            {
+                _TestData = GetPersonList(25);
+            }
+
+            return _TestData;
+        }
+    }
+
+
     public Person GetPerson()
     {
         var person = new Person();
@@ -87,8 +102,10 @@ public class TestDataFactory
         "Chandra",
         "Gupta",
         "Patel",
-        "Muffin-Topp",
-        "Hamster"        
+        "Muffin",
+        "Hamster",
+        "Yoink",
+        "Topp"
     };
 
     public List<string> Cities { get; private set; } = new()

@@ -4,6 +4,10 @@
     <ProjectReference Include="..\Benday.AspNetTemplateDemo.Api\Benday.AspNetTemplateDemo.Api.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
