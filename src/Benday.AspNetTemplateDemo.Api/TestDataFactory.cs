@@ -189,4 +189,16 @@ public class TestDataFactory
             }
         }
     }
+
+    public List<Person> GetPersonList(int count)
+    {
+        var list = new List<Person>();
+
+        for (int i = 0; i < count; i++)
+        {
+            list.Add(GetPerson());
+        }
+
+        return list;
+    }
 }
