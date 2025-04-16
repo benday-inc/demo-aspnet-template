@@ -11,16 +11,19 @@ public class Person
 
     [Display(Name = "Last Name")]
     public string LastName { get; set; } = string.Empty;
-    
+
     public List<Address> Addresses { get; set; } = new();
 
     [Display(Name = "Birth Date")]
+    [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:d}")]
     public DateTime BirthDate { get; set; } = DateTime.UtcNow;
 
-    [Display(Name = "Height (in))")]
+    [Display(Name = "Height (in)")]
+    [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:F2}")]
     public float HeightInInches { get; set; } = 69.549281f;
 
     [Display(Name = "Height (cm)")]
+    [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:F2}")]
     public float HeightInCentimeters
     {
         get
