@@ -30,4 +30,34 @@ public class PersonController : Controller
             return View(person);
         }
     }
+
+    [HttpPost]
+    public IActionResult Edit(Person person)
+    {
+        if (ModelState.IsValid == false)
+        {
+            return View(person);
+        }
+        else
+        {
+            var target = _TestDataFactory.TestData.FirstOrDefault(x => x.Id == person.Id);
+
+            if (target == null)
+            {
+                return NotFound();
+            }
+
+            Update(person, target);
+
+            return View(target);
+        }
+    }
+    private void Update(Person fromValue, Person toValue)
+    {
+        toValue.FirstName = fromValue.FirstName;
+        toValue.LastName = fromValue.LastName;
+        toValue.BirthDate = fromValue.BirthDate;
+        toValue.HeightInInches = fromValue.HeightInInches;
+        // toValue.Addresses = fromValue.Addresses;
+    }
 }
