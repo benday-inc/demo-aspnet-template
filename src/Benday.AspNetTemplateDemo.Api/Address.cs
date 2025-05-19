@@ -1,9 +1,13 @@
-﻿namespace Benday.AspNetTemplateDemo.Api;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Benday.AspNetTemplateDemo.Api;
 
 public class Address
 {
     public string Type { get; set; } = string.Empty;
     public string Line1 { get; set; } = string.Empty;
+
+    [Required(AllowEmptyStrings = true, ErrorMessage = "Line 2 is requiredasdf")]
     public string Line2 { get; set; } = string.Empty;
     public string City { get; set; } = string.Empty;
     public string State { get; set; } = string.Empty;

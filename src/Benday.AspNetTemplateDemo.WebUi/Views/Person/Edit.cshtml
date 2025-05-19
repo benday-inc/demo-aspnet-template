@@ -9,11 +9,11 @@
 <h4>Person</h4>
 <hr />
 
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit" method="post">
-            @Html.ValidationSummary()
+<form asp-action="Edit" method="post">
+    @Html.ValidationSummary()
 
+    <div class="row">
+        <div class="col-md-4">
             <div class="form-group mb-3">
                 <label asp-for="Id" class="control-label"></label>
                 <input asp-for="Id" class="form-control" />
@@ -45,14 +45,16 @@
                 <span asp-validation-for="HeightInCentimeters" class="text-danger"></span>
             </div>
 
-            @Html.EditorFor(model => model.Addresses, "AddressList")
 
-            <div class="form-group mb-3">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
-</div>
+
+    @Html.EditorFor(model => model.Addresses, "AddressList")
+
+    <div class="form-group mb-3">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+</form>
 
 <div>
     <a asp-action="Index">Back to List</a>

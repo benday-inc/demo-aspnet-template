@@ -3,9 +3,11 @@
 @{
 }
 
-<div class="col-2">@Html.EditorFor(model => Model.Type)</div>
-<div class="col-2">@Html.EditorFor(model => Model.Line1)</div>
-<div class="col-2">@Html.EditorFor(model => Model.Line2)</div>
-<div class="col-2">@Html.EditorFor(model => Model.City)</div>
-<div class="col-2">@Html.EditorFor(model => Model.State)</div>
-<div class="col-2">@Html.EditorFor(model => Model.PostalCode)</div>
+<tr>
+    <td>@Html.EditorFor(model => Model.Type)</td>
+    <td>@Html.EditorFor(model => Model.Line1)</td>
+    <td>@Html.EditorFor(model => Model.Line2)</td>
+    <td>@Html.EditorFor(model => Model.City)</td>
+    <td>@Html.EditorFor(model => Model.State)</td>
+    <td>@Html.EditorFor(model => Model.PostalCode)</td>
+</tr>
