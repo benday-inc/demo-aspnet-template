@@ -16,11 +16,10 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @for (var index = 0; index < Model.Count; index++)
         {
-            @Html.EditorFor(model => item)
+            @Html.EditorFor(model => model[index])
         }
-
     </tbody>
 </table>
 

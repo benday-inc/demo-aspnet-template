@@ -58,6 +58,6 @@ public class PersonController : Controller
         toValue.LastName = fromValue.LastName;
         toValue.BirthDate = fromValue.BirthDate;
         toValue.HeightInInches = fromValue.HeightInInches;
-        // toValue.Addresses = fromValue.Addresses;
+        toValue.Addresses = fromValue.Addresses;
     }
 }
