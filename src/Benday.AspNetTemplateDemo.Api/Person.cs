@@ -13,9 +13,13 @@ public class Person
     public string LastName { get; set; } = string.Empty;
 
     [Display(Name = "Email Address")]
+    [EmailAddress]
+    [Required]
     public string Email { get; set; } = string.Empty;
 
     [Display(Name = "Notes")]
+    [DataType(DataType.MultilineText)]
+    [StringLength(25, ErrorMessage = "The {0} must be at most {1} characters long.")]
     public string Notes { get; set; } = string.Empty;
 
     public List<Address> Addresses { get; set; } = new();
