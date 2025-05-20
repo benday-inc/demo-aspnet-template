@@ -7,9 +7,11 @@ public class Person
     public string Id { get; set; } = Guid.NewGuid().ToString();
 
     [Display(Name = "First Name")]
+    [Required]
     public string FirstName { get; set; } = string.Empty;
 
     [Display(Name = "Last Name")]
+    [Required] 
     public string LastName { get; set; } = string.Empty;
 
     [Display(Name = "Email Address")]
@@ -18,7 +20,6 @@ public class Person
     public string Email { get; set; } = string.Empty;
 
     [Display(Name = "Notes")]
-    [DataType(DataType.MultilineText)]
     [StringLength(25, ErrorMessage = "The {0} must be at most {1} characters long.")]
     public string Notes { get; set; } = string.Empty;
 
