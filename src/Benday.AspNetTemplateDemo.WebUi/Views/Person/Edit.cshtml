@@ -30,6 +30,11 @@
                 <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
             <div class="form-group mb-3">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
                 <label asp-for="BirthDate" class="control-label"></label>
                 <input type="text" asp-for="BirthDate" class="form-control" />
                 <span asp-validation-for="BirthDate" class="text-danger"></span>
@@ -44,7 +49,11 @@
                 <input asp-for="HeightInCentimeters" class="form-control" />
                 <span asp-validation-for="HeightInCentimeters" class="text-danger"></span>
             </div>
-
+            <div class="form-group mb-3">
+                <label asp-for="Notes" class="control-label"></label>
+                <input asp-for="Notes" class="form-control" />
+                <span asp-validation-for="Notes" class="text-danger"></span>
+            </div>
 
         </div>
     </div>

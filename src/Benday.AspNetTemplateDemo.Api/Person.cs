@@ -12,6 +12,12 @@ public class Person
     [Display(Name = "Last Name")]
     public string LastName { get; set; } = string.Empty;
 
+    [Display(Name = "Email Address")]
+    public string Email { get; set; } = string.Empty;
+
+    [Display(Name = "Notes")]
+    public string Notes { get; set; } = string.Empty;
+
     public List<Address> Addresses { get; set; } = new();
 
     [Display(Name = "Birth Date")]
